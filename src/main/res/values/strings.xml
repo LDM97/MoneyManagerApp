@@ -1,5 +1,22 @@
 <resources>
     <string name="app_name">MoneyManager</string>
 
+    <!-- Titles -->
     <string name="login_title">Login</string>
+    <string name="create_acc_title">Create Account</string>
+    <string name="home_title">Home</string>
+    <string name="budget_title">Budget</string>
+    <string name="add_transaction_title">Add Transaction</string>
+    <string name="history_title">History</string>
+    <string name="about_title">About</string>
+
+    <!-- Buttons -->
+    <string name="login_btn">Login</string>
+    <string name="create_acc_btn">Create Account</string>
+
+    <!-- Data entry hints -->
+    <string name="email_hint">Email...</string>
+    <string name="password_hint">Password...</string>
+    <string name="confirm_password_hint">Re-Enter Password</string>
+    <string name="name_hint">Name...</string>
 </resources>

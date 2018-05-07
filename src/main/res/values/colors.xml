@@ -4,4 +4,6 @@
     <color name="colorPrimaryDark">#003300</color>
     <color name="background">#262626</color>
     <color name="colorAccent">#CC9900</color>
+    <color name="mainTextColor">#ffffff</color>
+    <color name="hintTextColor">#d7d7d7</color>
 </resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+
+        <item
+            android:id="@+id/budget"
+            android:title="@string/budget_title" />
+
+        <item
+            android:id="@+id/addTransaction"
+            android:title="@string/add_transaction_title" />
+
+        <item
+            android:id="@+id/history"
+            android:title="@string/history_title" />
+
+        <item
+            android:id="@+id/about"
+            android:title="@string/about_title" />
+
+    </group>
+</menu>

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Login"
+    tools:context=".CreateAccount"
     android:background="@color/background">
 
     <include layout="@layout/toolbar"/>
@@ -17,6 +17,24 @@
         android:orientation="vertical"
         android:layout_weight="1"
         android:paddingTop="30dp">
+
+        <!-- User's name -->
+        <EditText
+            android:id="@+id/nameInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/default_margin"
+
+            android:textSize="@dimen/sub_text_size"
+            android:textColorHint="@color/hintTextColor"
+            android:textColor="@color/mainTextColor"
+            android:hint="@string/name_hint"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+
+            android:background="@drawable/rounded_corner_data_entry"
+            android:padding="@dimen/rounded_corner_padding"/>
 
         <!-- Email address for login -->
         <EditText
@@ -54,21 +72,22 @@
             android:background="@drawable/rounded_corner_data_entry"
             android:padding="@dimen/rounded_corner_padding"/>
 
-        <!-- Login button -->
-        <Button
-            android:id="@+id/loginBtn"
+        <!-- Password for login -->
+        <EditText
+            android:id="@+id/confirmPasswordInput"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_margin="@dimen/default_margin"
 
             android:ems="10"
+            android:hint="@string/confirm_password_hint"
+            android:inputType="textPassword"
             android:textColor="@color/mainTextColor"
             android:textColorHint="@color/hintTextColor"
             android:textSize="@dimen/sub_text_size"
-            android:text="@string/login_btn"
 
-            android:background="@drawable/rounded_corner_btn"
+            android:background="@drawable/rounded_corner_data_entry"
             android:padding="@dimen/rounded_corner_padding"/>
 
     </LinearLayout>
