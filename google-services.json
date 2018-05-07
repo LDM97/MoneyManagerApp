@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "126614218653",
+    "firebase_url": "https://moneymanager-c211a.firebaseio.com",
+    "project_id": "moneymanager-c211a",
+    "storage_bucket": "moneymanager-c211a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:126614218653:android:1a0b8c92d6e18c6b",
+        "android_client_info": {
+          "package_name": "mortimer.l.moneymanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "126614218653-t7b9sqoiem4ad3nf2h1oggqn7j2285hg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "mortimer.l.moneymanager",
+            "certificate_hash": "1c1361dead1790063173867a366bd6fdc137c55f"
+          }
+        },
+        {
+          "client_id": "126614218653-mtbqo49s012rjmaev6kpddrj0dmvcihc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBN5E_AkHWJYnWwAToZM6NTfNX2cPQW8rQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "126614218653-mtbqo49s012rjmaev6kpddrj0dmvcihc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
