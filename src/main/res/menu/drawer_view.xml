@@ -4,19 +4,23 @@
 
         <item
             android:id="@+id/budget"
-            android:title="@string/budget_title" />
+            android:title="@string/budget_title"
+            android:icon="@drawable/budget_icon"/>
 
         <item
             android:id="@+id/addTransaction"
-            android:title="@string/add_transaction_title" />
+            android:title="@string/add_transaction_title"
+            android:icon="@drawable/add_transaction_icon"/>
 
         <item
             android:id="@+id/history"
-            android:title="@string/history_title" />
+            android:title="@string/history_title"
+            android:icon="@drawable/history_icon"/>
 
         <item
             android:id="@+id/about"
-            android:title="@string/about_title" />
+            android:title="@string/about_title"
+            android:icon="@drawable/about_icon"/>
 
     </group>
 </menu>
