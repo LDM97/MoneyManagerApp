@@ -10,7 +10,6 @@
         // Budget data
         String budgetName;
         Integer budgetMax;
-        List<Transaction> transactions; // List of any transactions which have been made in this budget
 
         Budget()
         {

@@ -6,20 +6,46 @@
     public class Transaction
     {
         // Transaction data
-        String transactionName;
-        Integer transactionPrice;
-        boolean expenditure; // Is this an expenditure or income?
+        private String transactionName;
+        private String transactionPrice;
+        private String transactionDate;
 
         Transaction()
         {
             // Blank constructor, used by Firebase for retrieving objects
         }
 
-        Transaction( String transactionName, int transactionPrice, boolean expenditure )
+        Transaction( String transactionName, String transactionPrice, String date )
         {
             this.transactionName = transactionName;
             this.transactionPrice = transactionPrice;
-            this.expenditure = expenditure;
+            this.transactionDate = date;
         }
 
+        // Name get and setters
+        public String getTransactionName() {
+            return transactionName;
+        }
+
+        public void setTransactionName(String transactionName) {
+            this.transactionName = transactionName;
+        }
+
+        // Date get and setters
+        public String getTransactionDate() {
+            return transactionDate;
+        }
+
+        public void setTransactionDate(String transactionDate) {
+            this.transactionDate = transactionDate;
+        }
+
+        // Price get and setters
+        public String getTransactionPrice() {
+            return transactionPrice;
+        }
+
+        public void setTransactionPrice(String transactionPrice) {
+            this.transactionPrice = transactionPrice;
+        }
     }

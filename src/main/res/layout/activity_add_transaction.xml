@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".AddTransaction">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/background">
+
+        <include layout="@layout/toolbar"/>
+
+        <RadioGroup
+            android:id="@+id/isExpenditure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/expenditureRadioBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin"
+                android:textColor="@color/mainTextColor"
+                android:textStyle="bold"
+                android:buttonTint="@color/colorAccent"
+                android:layout_weight="1"
+                android:text="@string/expenditure" />
+
+            <RadioButton
+                android:id="@+id/incomeRadioBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin"
+                android:textColor="@color/mainTextColor"
+                android:textStyle="bold"
+                android:buttonTint="@color/colorAccent"
+                android:layout_weight="1"
+                android:text="@string/income" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/transactionName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_margin"
+            android:layout_gravity="center"
+            android:ems="10"
+            android:inputType="textPersonName"
+
+            android:textColor="@color/mainTextColor"
+            android:textColorHint="@color/hintTextColor"
+            android:hint="@string/transaction_name"
+
+            android:background="@drawable/rounded_corner_data_entry"
+            android:padding="@dimen/rounded_corner_padding"/>
+
+        <EditText
+            android:id="@+id/transactionPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_margin"
+            android:layout_gravity="center"
+            android:ems="10"
+            android:inputType="numberDecimal"
+
+            android:textColor="@color/mainTextColor"
+            android:textColorHint="@color/hintTextColor"
+            android:hint="@string/transaction_price"
+
+            android:background="@drawable/rounded_corner_data_entry"
+            android:padding="@dimen/rounded_corner_padding" />
+
+        <EditText
+            android:id="@+id/transactionDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_margin"
+            android:layout_gravity="center"
+            android:ems="10"
+            android:inputType="date"
+
+            android:textColor="@color/mainTextColor"
+            android:textColorHint="@color/hintTextColor"
+            android:hint="@string/transaction_date"
+
+            android:background="@drawable/rounded_corner_data_entry"
+            android:padding="@dimen/rounded_corner_padding"/>
+
+        <Button
+            android:id="@+id/addTransactionBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_margin"
+            android:layout_gravity="center"
+
+            android:textColor="@color/mainTextColor"
+            android:background="@drawable/rounded_corner_btn"
+            android:padding="@dimen/rounded_corner_padding"
+            android:text="@string/add_transaction_btn" />
+
+    </LinearLayout>
+
+    <include layout="@layout/nav_drawer_layout"/>
+
+</android.support.v4.widget.DrawerLayout>

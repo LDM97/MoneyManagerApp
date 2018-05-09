@@ -5,18 +5,116 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true">
+    android:fitsSystemWindows="true"
+    tools:context=".Home">
 
-        <LinearLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".Home"
         android:background="@color/background">
 
         <include layout="@layout/toolbar"/>
 
-    </LinearLayout>
+        <!-- Account balance container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/default_margin"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/accountTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin"
+                android:textSize="@dimen/title_text_size"
+                android:textColor="@color/mainTextColor"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="@string/account_title"/>
+
+            <TextView
+                android:id="@+id/accountBalance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin"
+                android:textSize="@dimen/title_text_size"
+                android:textColor="@color/mainTextColor"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorAccent"/>
+
+        <!-- Monthly budget container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/default_margin"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/monthlyBudgetTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin"
+                android:textSize="@dimen/title_text_size"
+                android:textColor="@color/mainTextColor"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="@string/monthly_budget_title"/>
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/default_margin"
+                android:padding="2dp"
+                android:background="@drawable/rounded_corner_data_entry">
+
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="39dp"
+                    android:background="@drawable/percentage_bar_layout"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorAccent"/>
+
+        <!-- Recent transactions container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/default_margin"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/recentTransactionsTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin"
+                android:textSize="@dimen/title_text_size"
+                android:textColor="@color/mainTextColor"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="@string/recent_transactions_title"/>
+
+        </LinearLayout>
+
+        </LinearLayout>
 
     <include layout="@layout/nav_drawer_layout"/>
 

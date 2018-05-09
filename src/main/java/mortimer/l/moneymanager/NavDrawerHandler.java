@@ -20,6 +20,20 @@
             // React accordingly based on which item is selected
             switch ( selectedItem.getItemId() ) {
 
+                case R.id.about: {
+                    // Take user to about screen
+                    Intent intent = new Intent(context, About.class);
+                    context.startActivity(intent);
+                    break;
+                }
+
+                case R.id.addTransaction: {
+                    // Take user to add transaction screen
+                    Intent intent = new Intent(context, AddTransaction.class);
+                    context.startActivity(intent);
+                    break;
+                }
+
                 /*
                 case R.id.teamCalendar :
                     // Take user to team calendar screen

@@ -15,10 +15,8 @@
     app:menu="@menu/drawer_view">
 
     <!-- Footer for the nav bar, contains logout button. Keep logout separate from navigation items -->
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="wrap_content"
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center_horizontal"
         android:layout_margin="@dimen/default_margin"
@@ -29,19 +27,30 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
             android:background="@drawable/logout_icon"
-            android:layout_marginRight="20dp"/>
+            app:layout_constraintBottom_toBottomOf="@+id/navLogout"
+            app:layout_constraintEnd_toStartOf="@+id/navLogout"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/navLogout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
             android:text="@string/logout_btn"
+            android:textColor="@color/mainTextColor"
             android:textSize="@dimen/title_text_size"
             android:textStyle="bold"
-            android:textColor="@color/mainTextColor"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-    </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
 
 </android.support.design.widget.NavigationView>

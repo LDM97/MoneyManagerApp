@@ -14,13 +14,18 @@
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".CreateAccount"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Home"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Home"
+            android:screenOrientation="portrait" />
+        <activity android:name=".About" />
+        <activity android:name=".AddTransaction"
             android:screenOrientation="portrait"/>
     </application>
 

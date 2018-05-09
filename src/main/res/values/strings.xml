@@ -9,15 +9,35 @@
     <string name="add_transaction_title">Add Transaction</string>
     <string name="history_title">History</string>
     <string name="about_title">About</string>
+    <string name="monthly_budget_title">Monthly Budget</string>
+    <string name="recent_transactions_title">Recent Transactions</string>
 
     <!-- Buttons -->
     <string name="login_btn">Login</string>
     <string name="create_acc_btn">Create Account</string>
     <string name="logout_btn">Logout</string>
+    <string name="add_transaction_btn">Add Transaction</string>
 
     <!-- Data entry hints -->
     <string name="email_hint">Email...</string>
     <string name="password_hint">Password...</string>
     <string name="confirm_password_hint">Re-Enter Password...</string>
     <string name="name_hint">Name...</string>
+    <string name="account_balance_hint">E.G. £25.00</string>
+    <string name="transaction_name">Transaction Name...</string>
+    <string name="transaction_price">Price...</string>
+    <string name="transaction_date">Date...</string>
+    <string name="expenditure">Expenditure</string>
+    <string name="income">Income</string>
+
+    <!-- Create new account -->
+    <string name="create_account">Create a New Account</string>
+    <string name="create_account_description">Create a new budget account by specifying the starting balance of your account.</string>
+    <string name="account_title">Account</string>
+
+    <!-- About main text -->
+    <string name="about_text">
+        This app was created by Liam Mortimer, as part of a project during study at Newcastle University.\n\nFor feedback or bug reporting, Liam can be contacted via email at:
+    </string>
+    <string name="contact_email">l.mortimer1@ncl.ac.uk</string>
 </resources>
