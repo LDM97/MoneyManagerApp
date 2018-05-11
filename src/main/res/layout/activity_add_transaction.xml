@@ -88,22 +88,22 @@
 
             android:textColor="@color/mainTextColor"
             android:textColorHint="@color/hintTextColor"
-            android:hint="@string/transaction_date"
+            android:hint="@string/date_hint"
 
             android:background="@drawable/rounded_corner_data_entry"
             android:padding="@dimen/rounded_corner_padding"/>
 
         <Button
-            android:id="@+id/addTransactionBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/default_margin"
-            android:layout_gravity="center"
+        android:id="@+id/addTransactionBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin"
+        android:layout_gravity="center"
 
-            android:textColor="@color/mainTextColor"
-            android:background="@drawable/rounded_corner_btn"
-            android:padding="@dimen/rounded_corner_padding"
-            android:text="@string/add_transaction_btn" />
+        android:textColor="@color/mainTextColor"
+        android:background="@drawable/rounded_corner_btn"
+        android:padding="@dimen/rounded_corner_padding"
+        android:text="@string/add_transaction_btn" />
 
     </LinearLayout>
 

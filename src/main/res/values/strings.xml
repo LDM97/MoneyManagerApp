@@ -11,12 +11,14 @@
     <string name="about_title">About</string>
     <string name="monthly_budget_title">Monthly Budget</string>
     <string name="recent_transactions_title">Recent Transactions</string>
+    <string name="search_filters_title">Search Filters</string>
 
     <!-- Buttons -->
     <string name="login_btn">Login</string>
     <string name="create_acc_btn">Create Account</string>
     <string name="logout_btn">Logout</string>
     <string name="add_transaction_btn">Add Transaction</string>
+    <string name="search_btn">Search</string>
 
     <!-- Data entry hints -->
     <string name="email_hint">Email...</string>
@@ -26,9 +28,11 @@
     <string name="account_balance_hint">E.G. £25.00</string>
     <string name="transaction_name">Transaction Name...</string>
     <string name="transaction_price">Price...</string>
-    <string name="transaction_date">Date...</string>
+    <string name="date_hint">Date...</string>
     <string name="expenditure">Expenditure</string>
     <string name="income">Income</string>
+    <string name="from_date">From</string>
+    <string name="to_date">To</string>
 
     <!-- Create new account -->
     <string name="create_account">Create a New Account</string>

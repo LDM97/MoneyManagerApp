@@ -34,6 +34,13 @@
                     break;
                 }
 
+                case R.id.history: {
+                    // Take user to history screen
+                    Intent intent = new Intent(context, History.class);
+                    context.startActivity(intent);
+                    break;
+                }
+
                 /*
                 case R.id.teamCalendar :
                     // Take user to team calendar screen

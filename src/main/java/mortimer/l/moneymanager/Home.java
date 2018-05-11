@@ -32,6 +32,7 @@
     import java.math.BigDecimal;
     import java.math.RoundingMode;
     import java.util.Calendar;
+    import java.util.List;
 
     public class Home extends AppCompatActivity implements View.OnClickListener
     {
@@ -120,6 +121,49 @@
                     // Display the account balance
                     String balanceString = "£" + balance.setScale( 2, RoundingMode.HALF_EVEN ).toPlainString();
                     accountBalanceOutput.setText( balanceString );
+
+
+                    // Display some of the recent transactions
+                    List<Transaction> transactions = currentUser.getSortedTransactions();
+
+                    // Setup the linear layout for displaying views
+                    ViewGroup linearLayout = (ViewGroup) findViewById( R.id.recentTransactionsContainer );
+
+                    for( int i = transactions.size() - 1; i > transactions.size() - 4 && i > -1; i-- )
+                    { // Loop backward through sorted transactions and display the 3 most recent transactions
+                        Transaction t = transactions.get( i );
+
+                        View searchResultItem = LayoutInflater.from( getApplicationContext() ).inflate( R.layout.search_result, linearLayout, false );
+
+                        // Display the name of the transaction
+                        TextView title = searchResultItem.findViewById( R.id.transactionName );
+                        title.setText( t.getTransactionName() );
+
+                        // Display the date of the transaction
+                        TextView date = searchResultItem.findViewById( R.id.transactionDate );
+                        date.setText( t.getTransactionDate() );
+
+                        // Display the price of the transaction
+                        BigDecimal transactionPrice = new BigDecimal( t.getTransactionPrice() );
+
+                        TextView priceOutput = searchResultItem.findViewById( R.id.transactionPrice );
+
+                        // Color the balance based on positive or negative balance
+                        if( transactionPrice.compareTo( zeroPounds ) < 0 )
+                        {
+                            priceOutput.setTextColor( Color.RED );
+                        } else {
+                            priceOutput.setTextColor( Color.GREEN );
+                        }
+
+                        // Display the transaction price
+                        String priceOutputString = "£" + transactionPrice.setScale( 2, RoundingMode.HALF_EVEN ).toPlainString();
+                        priceOutput.setText( priceOutputString );
+
+                        // Add the view to the screen w all the event data
+                        linearLayout.addView( searchResultItem );
+
+                    }
 
                 }
 

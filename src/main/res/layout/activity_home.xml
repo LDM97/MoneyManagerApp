@@ -21,8 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginBottom="@dimen/default_margin"
-            android:layout_weight="1">
+            android:layout_marginBottom="@dimen/default_margin">
 
             <TextView
                 android:id="@+id/accountTitle"
@@ -57,7 +56,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/default_margin"
-            android:layout_weight="1"
             android:orientation="vertical">
 
             <TextView
@@ -95,6 +93,7 @@
 
         <!-- Recent transactions container -->
         <LinearLayout
+            android:id="@+id/recentTransactionsContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/default_margin"

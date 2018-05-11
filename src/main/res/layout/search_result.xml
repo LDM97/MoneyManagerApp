@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/default_margin"
+    android:orientation="horizontal"
+    android:background="@color/background">
+
+    <!-- Transaction name and date container -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/transactionName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:textSize="@dimen/sub_text_size"
+            android:textColor="@color/mainTextColor"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="Nandos"/>
+
+        <TextView
+            android:id="@+id/transactionDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sub_text_size"
+            android:textColor="@color/mainTextColor"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="15/06/2018"/>
+
+    </LinearLayout>
+
+    <!-- Transaction price container -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center|end"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/transactionPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/title_text_size"
+            android:textColor="@color/mainTextColor"
+            android:textStyle="bold"
+            android:gravity="end"
+            android:text="Nandos"/>
+    </LinearLayout>
+
+
+</LinearLayout>

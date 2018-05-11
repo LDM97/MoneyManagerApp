@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".History">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/background">
+
+        <include layout="@layout/toolbar"/>
+
+        <!-- Search filter options container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/background">
+
+            <TextView
+                android:id="@+id/searchFilterTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin"
+                android:textSize="@dimen/title_text_size"
+                android:textColor="@color/mainTextColor"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="@string/search_filters_title"/>
+
+            <!-- Date range container -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Date range titles container -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/sub_text_size"
+                        android:textColor="@color/mainTextColor"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:text="@string/from_date"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/sub_text_size"
+                        android:textColor="@color/mainTextColor"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:text="@string/to_date"/>
+
+                </LinearLayout>
+
+                <!-- Container for date filter fields -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/fromDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/default_margin"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:ems="10"
+                        android:inputType="date"
+
+                        android:textColor="@color/mainTextColor"
+                        android:textColorHint="@color/hintTextColor"
+                        android:hint="@string/date_hint"
+
+                        android:background="@drawable/rounded_corner_data_entry"
+                        android:padding="@dimen/rounded_corner_padding"/>
+
+                    <EditText
+                        android:id="@+id/toDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/default_margin"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:ems="10"
+                        android:inputType="date"
+
+                        android:textColor="@color/mainTextColor"
+                        android:textColorHint="@color/hintTextColor"
+                        android:hint="@string/date_hint"
+
+                        android:background="@drawable/rounded_corner_data_entry"
+                        android:padding="@dimen/rounded_corner_padding"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/searchBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin"
+                android:layout_gravity="center"
+
+                android:textColor="@color/mainTextColor"
+                android:background="@drawable/rounded_corner_btn"
+                android:padding="@dimen/rounded_corner_padding"
+                android:text="@string/search_btn" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorAccent"/>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:isScrollContainer="true"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:id="@+id/searchResultsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </LinearLayout>
+
+    <include layout="@layout/nav_drawer_layout"/>
+
+</android.support.v4.widget.DrawerLayout>
