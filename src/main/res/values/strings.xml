@@ -12,6 +12,8 @@
     <string name="monthly_budget_title">Monthly Budget</string>
     <string name="recent_transactions_title">Recent Transactions</string>
     <string name="search_filters_title">Search Filters</string>
+    <string name="monthly_transactions_title">Transactions This Month</string>
+    <string name="new_budget_popup_title">Enter a New Budget...</string>
 
     <!-- Buttons -->
     <string name="login_btn">Login</string>
@@ -19,6 +21,7 @@
     <string name="logout_btn">Logout</string>
     <string name="add_transaction_btn">Add Transaction</string>
     <string name="search_btn">Search</string>
+    <string name="edit_budget_btn">Edit Budget</string>
 
     <!-- Data entry hints -->
     <string name="email_hint">Email...</string>

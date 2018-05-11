@@ -41,13 +41,12 @@
                     break;
                 }
 
-                /*
-                case R.id.teamCalendar :
-                    // Take user to team calendar screen
-                    Intent teamCalendarActivity = new Intent( context, TeamCalendar.class );
-                    context.startActivity( teamCalendarActivity );
+                case R.id.budget: {
+                    // Take user to budget screen
+                    Intent intent = new Intent(context, Budget.class);
+                    context.startActivity(intent);
                     break;
-                    */
+                }
             }
         }
 

@@ -51,40 +51,86 @@
             android:layout_height="2dp"
             android:background="@color/colorAccent"/>
 
-        <!-- Monthly budget container -->
-        <LinearLayout
+    <!-- Monthly budget container -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/default_margin"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/monthlyBudgetTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/default_margin"
-            android:orientation="vertical">
+            android:layout_margin="@dimen/default_margin"
+            android:textSize="@dimen/title_text_size"
+            android:textColor="@color/mainTextColor"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="@string/monthly_budget_title"/>
+
+        <!-- Container for text to display monthly budget -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/monthlyBudgetTitle"
+                android:id="@+id/spentMonthly"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/default_margin"
-                android:textSize="@dimen/title_text_size"
+                android:layout_marginLeft="25dp"
+                android:textSize="@dimen/sub_text_size"
                 android:textColor="@color/mainTextColor"
                 android:textStyle="bold"
-                android:gravity="center"
-                android:text="@string/monthly_budget_title"/>
+                android:gravity="start"/>
 
-            <LinearLayout
-                android:layout_width="300dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center"
-                android:layout_margin="@dimen/default_margin"
-                android:padding="2dp"
-                android:background="@drawable/rounded_corner_data_entry">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"
+                android:textSize="@dimen/sub_text_size"
+                android:textColor="@color/mainTextColor"
+                android:textStyle="bold"
+                android:gravity="start"
+                android:text="/"/>
 
-                <LinearLayout
-                    android:layout_width="150dp"
-                    android:layout_height="39dp"
-                    android:background="@drawable/percentage_bar_layout"/>
-
-            </LinearLayout>
+            <TextView
+                android:id="@+id/monthlyBudget"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sub_text_size"
+                android:textColor="@color/mainTextColor"
+                android:textStyle="bold"
+                android:gravity="start"/>
 
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin"
+            android:layout_marginBottom="@dimen/default_margin"
+            android:background="@drawable/rounded_corner_data_entry"
+            android:padding="2dp">
+
+            <!-- Monthly budget bar -->
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="@style/CustomProgressBarHorizontal"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:background="@drawable/rounded_corner_data_entry"
+                android:indeterminateOnly="false"
+                android:progressTint="@color/colorPrimaryDark" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
         <View
             android:layout_width="fill_parent"

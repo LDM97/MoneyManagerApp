@@ -17,7 +17,7 @@
         private String userId;
         private String name;
         private String accountBalance;
-        private List<Budget> budgets;
+        private String monthlyBudget;
         List<Transaction> transactions;
 
         User()
@@ -105,20 +105,13 @@
             this.accountBalance = accountBalance;
         }
 
-        // Get and set methods for the budgets
-        public List<Budget> getBudgets() {
-            // If no budgets made yet (is null) then return empty list.
-            return ( budgets == null ) ? new LinkedList<Budget>() : this.budgets;
+        // Get and set methods for the monthly budgets
+        public String getMonthlyBudget() {
+            return monthlyBudget;
         }
 
-        public void setBudgets(List<Budget> budgets) {
-            this.budgets = budgets;
-        }
-
-        // Get and set methods for the name
-        public String getName() {
-
-            return name;
+        public void setMonthlyBudget(String monthlyBudget) {
+            this.monthlyBudget = monthlyBudget;
         }
 
         public void setName(String name) {

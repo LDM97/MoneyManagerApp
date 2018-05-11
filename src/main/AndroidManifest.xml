@@ -24,11 +24,17 @@
         <activity
             android:name=".Home"
             android:screenOrientation="portrait" />
-        <activity android:name=".About" />
+        <activity
+            android:name=".About"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".AddTransaction"
             android:screenOrientation="portrait" />
-        <activity android:name=".History"></activity>
+        <activity
+            android:name=".History"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Budget"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

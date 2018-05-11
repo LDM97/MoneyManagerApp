@@ -9,6 +9,16 @@
         <item name="android:actionMenuTextColor">@color/mainTextColor</item>
     </style>
 
+    <!-- Progress bar style -->
+    <style name="CustomProgressBarHorizontal" parent="android:Widget.ProgressBar.Horizontal">
+        <item name="android:minHeight">10dip</item>
+        <item name="android:maxHeight">30dp</item>
+        <item name="android:maxWidth">290dp</item>
+        <item name="android:background">@drawable/rounded_corner_data_entry</item>
+        <item name="android:radius">5dp</item>
+    </style>
+
+    <!-- Nav drawer style -->
     <style name="navDrawItems" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:textSize">@dimen/title_text_size</item>
         <item name="android:layout_marginRight">2dp</item>

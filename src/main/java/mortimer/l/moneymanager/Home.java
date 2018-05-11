@@ -18,6 +18,7 @@
     import android.view.ViewGroup;
     import android.widget.LinearLayout;
     import android.widget.PopupWindow;
+    import android.widget.ProgressBar;
     import android.widget.RelativeLayout;
     import android.widget.TextView;
 
@@ -84,10 +85,6 @@
                                     return true;
                                 }
                             });
-
-            // Hide the menu items. User not part of a team, cannot view these screens. Can only logout
-            // Menu nav_Menu = navigationView.getMenu();
-            // nav_Menu.findItem( R.id.teamCalendar ).setVisible( false );
 
             // Get a reference to the database
             FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -165,6 +162,49 @@
 
                     }
 
+                    BigDecimal monthlyExpenditure = new BigDecimal( 0 ).setScale( 2, RoundingMode.HALF_EVEN );
+
+                    // Find transactions from this current month
+                    for( DataSnapshot i : snapshot.child( "Users" ).child( userId ).child( "transactions" ).getChildren() )
+                    {
+                        // Get transaction and months to compare
+                        Transaction t = i.getValue( Transaction.class );
+                        String transactionMonthStr = t.getTransactionDate().substring( 3, 5 );
+                        int transactionMonth = Integer.parseInt( transactionMonthStr ) -1;
+
+                        Calendar c = Calendar.getInstance();
+                        int currentMonth = c.get( Calendar.MONTH );
+
+                        if( currentMonth == transactionMonth )
+                        { // Is from this month, take into account when calculating
+
+                            // Add to total for monthly expenditure
+                            BigDecimal transactionPriceBigDec = new BigDecimal( t.getTransactionPrice() ).setScale( 2, RoundingMode.HALF_EVEN );
+
+                            if( transactionPriceBigDec.compareTo( new BigDecimal( 0 ) ) < 0 )
+                            { // Is expenditure, add to expenditure list
+                                transactionPriceBigDec = transactionPriceBigDec.subtract( transactionPriceBigDec.multiply( new BigDecimal( 2 ) ) );
+                                monthlyExpenditure = monthlyExpenditure.add( transactionPriceBigDec );
+                            }
+                        }
+                    }
+
+                    // Display in text the monthly budget spent
+                    TextView monthlyExpenditureOutput = findViewById( R.id.spentMonthly );
+                    String expenseOutputStr = "£" + monthlyExpenditure.toPlainString();
+                    monthlyExpenditureOutput.setText( expenseOutputStr );
+
+                    TextView monthlyBudgetOutput = findViewById( R.id.monthlyBudget );
+                    String budgetOutputStr = "£" + currentUser.getMonthlyBudget();
+                    monthlyBudgetOutput.setText( budgetOutputStr );
+
+                    // Visually display the monthly budget spent
+                    BigDecimal monthlyBudgetBig = new BigDecimal( currentUser.getMonthlyBudget() ).setScale( 2, RoundingMode.HALF_EVEN );
+                    BigDecimal percentage = ( monthlyExpenditure.divide( monthlyBudgetBig, RoundingMode.HALF_EVEN ) ).multiply( new BigDecimal( 100 ) );
+                    ProgressBar bar = findViewById( R.id.progressBar );
+                    bar.setMax( 100 );
+                    bar.setProgress( percentage.intValue() );
+
                 }
 
                 @Override
@@ -173,11 +213,6 @@
                 }
             });
 
-            /* Calendar sth like this for month
-            TextView accountBalanceOutput = (TextView) findViewById( R.id.accountBalance );
-            Calendar c = Calendar.getInstance();
-            accountBalanceOutput.setText( c.get( Calendar.MONTH ) );
-            */
         }
 
         @Override
